@@ -1,0 +1,1 @@
+const hamburger=document.querySelector(".hamburger"),navMenu=document.querySelector(".nav-menu");function mobileMenu(){hamburger.classList.toggle("active"),navMenu.classList.toggle("active")}function closeSideBar(){hamburger.classList.toggle("active"),navMenu.classList.toggle("active")}hamburger.addEventListener("click",mobileMenu)

@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid pink; */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.txt {
+    height: 250px;
+    /* display: none; */
+}
+
+#ev {
+    position: relative;
+    border-bottom: 1px solid aqua;
+}
+
+/* #ev::after {
+    content: '';
+    display: block;
+    width: 190px;
+    height: 1px;
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+} */
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 100vw;
+    /* position: absolute; */
+    top: 120px;
+    z-index: 999;
+}
+
+
+#inter {
+    position: relative;
+    overflow: hidden;
+    /* padding-left: 15px; */
+}
+
+#inter span {
+    font-size: .7rem;
+}
+
+#inter::before {
+    content: 'Inter';
+    /* display: block; */
+    background-color: rgba(134, 174, 174, 0.353);
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+    padding: 0px 15px;
+    font-size: 0.6rem;
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    transform: rotate(320deg);
+}
+
+.day {
+    width: 100px;
+    height: 40px;
+    background-color: #222222;
+    color: white;
+    border-radius: 2px;
+    margin-inline: 20px;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: 'Exo', sans-serif;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.day:hover {
+    background-color: #000000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: 1d1d1d;
+}
+
+.evntsAndBody {
+    display: grid;
+    place-items: center;
+    font-family: 'Exo', sans-serif;
+}
+
+.evntbody {
+    width: 80vw;
+
+    padding: 60px 0px;
+    height: fit-content;
+    margin-inline: auto;
+    position: relative;
+}
+
+.container {
+    animation: lefttoright 0.3s ease-in-out;
+}
+
+@keyframes lefttoright {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+}
+
+
+
+#intrClg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 100px;
+    place-items: center;
+}
+
+#dayOne {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 100px;
+    place-items: center;
+}
+
+#dayTwo {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 100px;
+    place-items: center;
+}
+
+#dayThree {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 100px;
+    place-items: center;
+}
+
+.evnt-card {
+    width: 250px;
+    height: 350px;
+    background-color: aqua;
+    border-radius: 5px;
+    overflow: scroll;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    color: white;
+    background-color: #1f1f1f;
+
+
+}
+
+
+
+
+
+.finfo {
+    display: none;
+    text-align: left;
+    position: relative;
+}
+
+.fback {
+    background-color: #222222;
+    background-color: #123f4e;
+    width: 60px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 0px 5px 0px 5px;
+    position: sticky;
+    left: 220px;
+    top: 0px;
+    cursor: pointer;
+    z-index: 10;
+    font-family: 'Exo', sans-serif;
+    font-size: 0.85rem;
+    font-family: 'Exo', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.evnt-org p,
+.evnt-desc p,
+.evnt-rules p {
+    text-align: left;
+    opacity: 0.8;
+    font-family: 'Exo', sans-serif;
+    font-size: .9rem;
+    padding-inline: 20px;
+    opacity: 0.7;
+    text-transform: capitalize;
+    line-height: 25px;
+}
+
+.evnt-rules p::first-letter {
+    text-transform: capitalize;
+}
+
+.evnt-org h2,
+.evnt-desc h2,
+.evnt-rules h2 {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    opacity: 0.9;
+    font-weight: 500;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.2rem;
+    padding-inline: 15px;
+    font-family: 'Exo', sans-serif;
+}
+
+b {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.evnt-org h2::after,
+.evnt-desc h2::after,
+.evnt-rules h2::after {
+    content: ' :';
+}
+
+
+
+
+.evnt-img {
+    width: 250px;
+    height: 150px;
+}
+
+.evnt-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.evnt-title {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* padding-top: 10px; */
+    /* background-color: aquamarine; */
+}
+
+.evnt-title .h2 {
+    display: grid;
+    place-items: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    height: 35%;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Exo', sans-serif;
+}
+
+.evnt-title .h2 p {
+    border-bottom: 1px solid rgba(0, 255, 255, 0.5);
+}
+
+.evnt-title .evnt-details {
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 50%;
+    opacity: 0.7;
+    line-height: 25px;
+}
+
+.more-btn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: aquamarine; */
+    position: absolute;
+    bottom: 0px;
+}
+
+.more-btn button {
+    width: 100px;
+    height: 40px;
+    /* border-radius: 5px; */
+    border: none;
+    display: grid;
+    place-items: center;
+
+    background-color: #191919;
+    color: white;
+    cursor: pointer;
+    font-family: 'Exo', sans-serif;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+}
+
+
+@media screen and (hover:hover) {
+    .evnt-card:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .evntbody {
+        width: 100vw;
+    }
+
+    #ev {
+        font-family: 'Exo', sans-serif;
+        font-size: 1.7rem;
+    }
+
+    .heading {
+        width: 100vw;
+        padding-inline: 10px;
+    }
+
+    .heading .day {
+        margin: 0px;
+        height: 40px;
+        font-size: 1rem;
+
+    }
+}
+
+@media screen and (max-width:350px) {
+    .day {
+        margin-inline: 10px;
+        font-family: 'Exo', sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .evnt-card {
+        width: 220px;
+    }
+
+    .evnt-title h2 {
+        font-family: 'Exo', sans-serif;
+        font-size: 22px;
+    }
+
+    .evnt-title .evnt-details {
+        font-family: 'Exo', sans-serif;
+        font-size: 14px;
+    }
+
+    .more-btn button {
+        width: 75px;
+        height: 35px;
+    }
+}
+
+
+button:disabled {
+    border: 1px dashed rgba(255, 0, 0, 0.698);
+    background-color: #2e2e2e;
+    text-decoration: line-through;
+}

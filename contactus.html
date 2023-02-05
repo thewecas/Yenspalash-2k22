@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("krPfRvj5XxAUbV3aV");
+        })();
+    </script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Dosis:wght@300;400;700&family=Exo:wght@300;400;500&family=Jura&family=Lora:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;500;700&family=News+Cycle&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./contactus.css?ver=2.5">
+    <link rel="stylesheet" href="./style.css?ver=4">
+
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="" id="logos"><img src="./images/yenTxt.png" alt=""></a>
+        <ul class="nav-menu">
+            <li class="nav-item mm"><a href="./index.html"> Home</a></li>
+            <li class="nav-item mm"><a href="./events.html"> Events</a></li>
+            <li class="nav-item mm"><a href="./index.html#gallery"> Gallery</a></li>
+            <li class="nav-item mm"><a href="./index.html#pron"> Pro-Events</a></li>
+             <li class="nav-item mm"><a href="./sponsors.html" target="_blank"> Sponsors</a></li> 
+            <li class="nav-item mm"><a href="./techteam.html" target="_blank"> Our Team</a> </li>
+            <li class="nav-item mm"><a href="#"> Contact us</a> </li>
+            <!-- <li class="nav-items mm">
+                <div class="login " href="#">Login</div>
+            </li> -->
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <!-- </header> -->
+
+    <!-- navbar -->
+
+
+<div class="form">
+        <h3>Get In Touch</h3>
+
+        <label for="name">Name</label>
+        <input type="text" placeholder="Your Name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Your Email" id="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" placeholder="Phone no." id="phone">
+        <br>
+        <div class="space"> </div>
+        <textarea id="message" cols="55" rows="4" placeholder="How can we help you?"></textarea>
+        <button id="sendBtn" onclick="sendEmail()">Send</button>
+    </div>
+
+
+
+   
+
+    <!-- <footer>
+        <div class="fcontent">
+
+            <h1>YENSPLASH'22</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab velit nihil porro natus a.</p>
+            <ul class="socialm">
+                <li style="--clr:#c32aa3;"><a href="https://www.instagram.com/yenepoya_instituteoftechnology" target="blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li style="--clr:#1877f2;"><a href="https://www.facebook.com/YITENGINEERING/"><i class="fa-brands fa-facebook-f" target="blank"></i></a></li>
+                <li style="--clr:#ff0000;"><a href="https://goo.gl/maps/qFAQaLeGH2BEKVDe6" target="blank"><i class="fa-solid fa-location-dot"></i></a></li>
+            </ul>
+        </div>
+        <div class="fbottom">
+            <P class="footer-copy">Copyright &copy;2022 YENSPLASH. All Rights Reserved</P>
+            <p class="footer-heart">
+                Made with <g-emoji class="g-emoji" alias="heart"
+                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+                    <img class="emoji" alt="heart" height="20" width="20"
+                        src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+                </g-emoji> by <a href="techteam.html" target="blank" style="--back:rgb(255, 238, 0);">YenTech-Team</a>
+            </p>
+
+        </div>
+    </footer> -->
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+         function sendEmail(params) {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var msg = document.getElementById('message').value;
+        var fromName = ' Name : ' + name + ' |  Phone No. : ' + phone + '  |   Mail : ' + email;
+        var tempParams = {
+            from_name: fromName,
+            to_name: 'Yen-TechTeam',
+            message: msg,
+        };
+
+
+        emailjs.send('service_pq9ewla', 'template_mcwyjaf', tempParams).then(function (res) {
+            console.log('succes', res.status);
+            alert('Message Sent Succesfully');
+        })
+    }
+
+    </script>
+
+    <script src="./header.js"></script>
+</body>
+
+</html>
